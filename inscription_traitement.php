@@ -31,7 +31,12 @@
                             
                             // On stock l'adresse IP
                             $ip = $_SERVER['REMOTE_ADDR']; 
-
+                             /*
+                              ATTENTION
+                              Verifiez bien que le champs token est présent dans votre table utilisateurs, il a été rajouté APRÈS la vidéo
+                              le .sql est dispo pensez à l'importer ! 
+                              ATTENTION
+                            */
                             // On insère dans la base de données
                             $insert = $bdd->prepare('INSERT INTO utilisateurs(pseudo, email, password, ip, token) VALUES(:pseudo, :email, :password, :ip, :token)');
                             $insert->execute(array(
