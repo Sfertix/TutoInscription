@@ -35,13 +35,29 @@
                         <?php
                         break;
 
-                        case 'already':
+                        case 'never':
                         ?>
                             <div class="alert alert-danger">
                                 <strong>Erreur</strong> compte non existant
                             </div>
                         <?php
                         break;
+
+                        case 'success':
+                        ?>
+                            <div class="alert alert-success">
+                                <strong>Succès</strong> inscription réussie !
+                            </div>
+                        <?php
+                        break;
+                        
+                        case 'already':
+                        ?>
+                            <div class="alert alert-danger">
+                                <strong>Erreur</strong> compte déjà existant
+                            </div>
+                        <?php
+
                     }
                 }
                 ?> 
